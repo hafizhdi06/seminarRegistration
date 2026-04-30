@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Seminar Registration App</string>
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="nomor_hp">Nomor HP</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="pilih_seminar">Pilih Seminar</string>
+    <string name="daftar_seminar">Daftar Seminar</string>
+    <string name="submit">Submit Pendaftaran</string>
+    <string name="pendaftaran_berhasil">Pendaftaran Berhasil!</string>
+    <string name="kembali_beranda">Kembali ke Beranda</string>
+    <string name="belum_punya_akun">Belum punya akun? Daftar</string>
+    <string name="sudah_punya_akun">Sudah punya akun? Masuk</string>
+    <string name="laki_laki">Laki-laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="checkbox_agreement">Saya menyetujui data yang diinput benar</string>
+    <string name="konfirmasi_title">Konfirmasi Pendaftaran</string>
+    <string name="konfirmasi_msg">Apakah data yang Anda isi sudah benar?</string>
+    <string name="ya">Ya</string>
+    <string name="tidak">Tidak</string>
+    <string name="logout">Keluar</string>
+    <string name="selamat_datang">Selamat datang,</string>
+    <string-array name="daftar_seminar_array">
+        <item>-- Pilih Seminar --</item>
+        <item>Artificial Intelligence &amp; Machine Learning</item>
+        <item>Cybersecurity &amp; Ethical Hacking</item>
+        <item>Cloud Computing &amp; DevOps</item>
+        <item>Mobile App Development (Android &amp; iOS)</item>
+        <item>Data Science &amp; Big Data Analytics</item>
+        <item>Internet of Things (IoT) Terapan</item>
+    </string-array>
+</resources>

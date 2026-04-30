@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/gray_100">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/AppToolbar" app:title="Form Pendaftaran" app:subtitle="Isi data dengan benar dan lengkap" app:navigationIcon="@drawable/ic_arrow_back"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <!--  Card Data Diri  -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="12dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data Diri" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/blue_700" android:layout_marginBottom="12dp"/>
+                    <!--  Nama  -->
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilNama" style="@style/InputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nama Lengkap *" app:startIconDrawable="@drawable/ic_person">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNama" android:layout_width="match_parent" android:layout_height="wrap_content" android:imeOptions="actionNext" android:inputType="textPersonName"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--  Email  -->
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilEmail" style="@style/InputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email *" android:layout_marginTop="12dp" app:startIconDrawable="@drawable/ic_email">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:imeOptions="actionNext" android:inputType="textEmailAddress"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--  Nomor HP  -->
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilHp" style="@style/InputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nomor HP *" android:layout_marginTop="12dp" app:startIconDrawable="@drawable/ic_phone" app:helperText="Contoh: 081234567890">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etHp" android:layout_width="match_parent" android:layout_height="wrap_content" android:imeOptions="actionDone" android:inputType="phone" android:maxLength="13"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--  Jenis Kelamin  -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jenis Kelamin *" android:textSize="13sp" android:textColor="@color/gray_600" android:layout_marginTop="16dp"/>
+                    <RadioGroup android:id="@+id/rgJenisKelamin" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="6dp">
+                        <com.google.android.material.radiobutton.MaterialRadioButton android:id="@+id/rbLakiLaki" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Laki-laki" android:layout_marginEnd="24dp" android:buttonTint="@color/blue_700"/>
+                        <com.google.android.material.radiobutton.MaterialRadioButton android:id="@+id/rbPerempuan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perempuan" android:buttonTint="@color/blue_700"/>
+                    </RadioGroup>
+                    <TextView android:id="@+id/tvJkError" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="12sp" android:textColor="@color/error_red" android:layout_marginTop="4dp" android:visibility="gone"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--  Card Seminar  -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:cardCornerRadius="12dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilihan Seminar" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/blue_700" android:layout_marginBottom="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seminar *" android:textSize="13sp" android:textColor="@color/gray_600" android:layout_marginBottom="6dp"/>
+                    <Spinner android:id="@+id/spinnerSeminar" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/spinner_bg" android:paddingStart="14dp" android:paddingEnd="14dp"/>
+                    <TextView android:id="@+id/tvSeminarError" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="12sp" android:textColor="@color/error_red" android:layout_marginTop="4dp" android:visibility="gone"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--  Card Persetujuan  -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:cardCornerRadius="12dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbAgree" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Saya menyetujui data yang diinput benar dan bertanggung jawab atas kebenarannya." android:textSize="13sp" android:buttonTint="@color/blue_700" android:lineSpacingExtra="2dp"/>
+                    <TextView android:id="@+id/tvAgreeError" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="12sp" android:textColor="@color/error_red" android:layout_marginTop="4dp" android:visibility="gone"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--  Submit Button  -->
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSubmit" style="@style/ButtonPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="24dp" android:text="Submit Pendaftaran" app:icon="@drawable/ic_send" app:iconGravity="textEnd" app:iconSize="18dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
